@@ -274,6 +274,43 @@ section {
     font-size: 14px;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 70px;
+    align-items: center;
+    color: white;
+    margin: 50px 0;
+    /* border-top: 2px solid white; */
+}
+
+.footer-sub-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer-sub-left ul {
+    list-style: none;
+}
+
+.footer-sub-left a{
+    color: white;
+    text-decoration: none;
+}
+.sub-right-bot{
+    display: flex;
+    gap: 5px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+a{
+    color: white;
+}
 @media screen and (max-width: 1200px) {
     section {
         padding: 60px 8%;
@@ -391,6 +428,25 @@ section {
     .fotopopular {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 15px;
+    }
+
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-sub-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-sub-left{
+        align-items: center;
+        text-align: center;
     }
 }
 
