@@ -20,7 +20,6 @@ section {
     padding: 70px 17% 69px;
 }
 
-/* ================== NAVBAR ================== */
 .palingawal {
     width: 100%;
     display: flex;
@@ -61,7 +60,6 @@ section {
     display: flex;
     gap: 2rem;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .links a {
@@ -92,9 +90,8 @@ section {
     width: 100%;
 }
 
-/* ================== HOME ================== */
 .home {
-    position: relative;
+    /* position: relative; */
     height: 100vh;
     width: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8) 100%),
@@ -136,9 +133,8 @@ section {
     color: white;
 }
 
-/* ================== ABOUT ================== */
 .about {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,7 +155,6 @@ section {
     align-items: flex-end;
     gap: 30px;
     margin-bottom: 40px;
-    flex-wrap: wrap;
 }
 
 .foto {
@@ -203,7 +198,6 @@ section {
     color: white;
 }
 
-/* ================== POPULAR & FOOD ================== */
 .popular, .food {
     display: flex;
     flex-direction: column;
@@ -251,13 +245,12 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     text-align: center;
-    gap: 20px;
 }
 
 .fotoitem img,
 .fotoitemfood img {
-    max-width: 100%;
-    height: auto;
+    width: 350px;
+    height: 460px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.5s;
@@ -278,35 +271,138 @@ section {
     font-size: 14px;
 }
 
-/* ================== MEDIA QUERIES ================== */
 @media screen and (max-width: 1200px) {
-    section { padding: 60px 10%; }
-    .hometext h1 { font-size: 4rem; }
+    section {
+        padding: 60px 8%;
+    }
+
+    .hometext h1 {
+        font-size: 4rem;
+    }
+
+    .fotoitem img,
+    .fotoitemfood img {
+        width: 80%;
+        height: auto;
+    }
 }
 
+/* Tablet (≤992px) */
 @media screen and (max-width: 992px) {
-    section { padding: 50px 8%; }
-    .palingawal { padding: 15px 40px; }
-    .links { gap: 1rem; }
-    .hometext { left: 8%; top: 25%; }
-    .hometext h1 { font-size: 3rem; }
-    .aboutfoto { gap: 20px; }
-    .foto.kecil, .foto.sedang, .foto.besar { width: 200px; height: auto; }
+    section {
+        padding: 50px 6%;
+    }
+
+    .palingawal {
+        flex-direction: column;
+        padding: 10px 30px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 10px;
+    }
+
+    .hometext {
+        left: 8%;
+        top: 25%;
+    }
+
+    .hometext h1 {
+        font-size: 3rem;
+    }
+
+    .aboutfoto {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .foto {
+        width: 45% !important;
+        height: auto !important;
+    }
+
+    .fotoitem img,
+    .fotoitemfood img {
+        width: 70%;
+        height: auto;
+    }
 }
 
+/* HP (≤768px) */
 @media screen and (max-width: 768px) {
-    section { padding: 40px 5%; }
-    .palingawal { flex-direction: column; padding: 10px 20px; }
-    .links { justify-content: center; margin-top: 10px; }
-    .hometext { left: 5%; top: 20%; }
-    .hometext h1 { font-size: 2.2rem; }
-    .aboutfoto { flex-direction: column; align-items: center; }
-    .foto.kecil, .foto.sedang, .foto.besar { width: 90%; height: auto; }
+    section {
+        padding: 40px 5%;
+    }
+
+    .palingawal {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .hometext {
+        left: 5%;
+        top: 20%;
+        max-width: 90%;
+    }
+
+    .hometext h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    section#about.about{
+        height: auto;
+    }
+    .aboutfoto {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .foto {
+        width: 80% !important;
+        height: auto !important;
+    }
+
+    .fotoitem img,
+    .fotoitemfood img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fotopopular {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
 }
 
+/* HP Kecil (≤480px) */
 @media screen and (max-width: 480px) {
-    .hometext h1 { font-size: 1.6rem; }
-    .hometext h5 { font-size: 14px; letter-spacing: 4px; }
-    .abouttext h3 { font-size: 1.2rem; }
-    .abouttext p { font-size: 0.85rem; }
+    .hometext h1 {
+        font-size: 1.8rem;
+    }
+
+    .hometext h5 {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .hometext p {
+        font-size: 0.9rem;
+        line-height: 24px;
+    }
+
+    .foto {
+        width: 95% !important;
+    }
+
+    .fotoitem img,
+    .fotoitemfood img {
+        width: 100%;
+        height: auto;
+    }
 }
+
